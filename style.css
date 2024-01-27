@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Todo o código foi feito para dispositivos móveis */
+/*______________________________________ Layout geral ______________________________________*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: justify;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    display: grid;
+    place-content: center; /* Os itens grid (é um só: o div.container) serão centralizados no body */
+}
+
+.container {
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 8%;
+    border-radius: 10px;
+    overflow: hidden; /* O valor default de qualquer div é visible, i.e., seu conteúdo pode ser renderizado para fora dos seus limites. Sem definir o valor hidden, não tem como fazer as bordas arredondadas, porque as bordas das divs filhas a ultrapassam e são renderizadas normalmente em vez de ficarem escondidas. */
+}
+
+.container > * {
+    padding: 7%; /* Vertical e horizontal se forem 2 valores; Cima, direita, baixo, esquerda (sentido horário) se forem 4 */
+    display: grid;
+    grid-gap: 20px;
+}
+
+.join {
+    background-color: white;
+    grid-area: j;
+}
+
+.monthly {
+    background-color: hsl(179, 62%, 43%);
+    grid-area: m;
+}
+
+.why {
+    background-color: hsla(179, 62%, 43%, 0.8);
+    grid-area: w;
+}
+
+.informativo-preco {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/*______________________________________ Textos ______________________________________*/
+h1 {
+    font-size: 18px;
+    color: hsl(179, 62%, 43%);
+    font-weight: bold;
+}
+
+.texto-amarelo {
+    color: hsl(71, 73%, 54%);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.texto-cinza {
+    color: rgb(180, 180, 180);
+    font-size: 13px;
+    line-height: 1.75em;
+}
+
+h2 {
+    color: white;
+}
+
+.preco {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.per-month {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.full-access {
+    font-size: 14px;
+}
+
+button {
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 5px;
+    border: none;
+    padding: .9em;
+    font-size: 14px;
+    font-style: bold;
+    width: 100%;
+    text-align: center;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2); /* Cria uma caixa por trás do botão. Sintaxe: deslocamento-direita deslocamento-baixo avanço-blur-borda offset-tamanho-caixa cor. Insira uma vírgula e repita os parâmetros para criar uma segunda sombra (por exemplo, várias sombras coloridas) */
+}
+
+li {
+    font-size: 13px;
+    line-height: 1.5em;
+    color: rgba(255, 255, 255, 0.7);   
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Alterações para tablets e dispositivos maiores */
+@media screen and (min-width: 768px) {
+    .container { /* A classe container pode ser aplicada a um elemento para transformá-lo em um contêiner grid. A partir disso, seus filhos diretos serão tratados como um item grid. */
+        display: grid;
+        grid-template:
+        "j j"
+        "m w"
+        / 1fr 1fr;
+        width: 640px;
+        margin: 0;
+    }
+    .container > * {
+        padding: 40px;
+    }
+}
