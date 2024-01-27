@@ -26,7 +26,7 @@ body {
 }
 
 .container > * {
-    padding: 7%; /* Vertical e horizontal se forem 2 valores; Cima, direita, baixo, esquerda (sentido horário) se forem 4 */
+    padding: 7%;
     display: grid;
     grid-gap: 20px;
 }
@@ -99,13 +99,13 @@ button {
     font-style: bold;
     width: 100%;
     text-align: center;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2); /* Cria uma caixa por trás do botão. Sintaxe: deslocamento-direita deslocamento-baixo avanço-blur-borda offset-tamanho-caixa cor. Insira uma vírgula e repita os parâmetros para criar uma segunda sombra (por exemplo, várias sombras coloridas) */
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
 
 li {
     font-size: 13px;
     line-height: 1.5em;
-    color: rgba(255, 255, 255, 0.7);   
+    color: rgba(255, 255, 255, 0.7);
 }
 
 ul {
@@ -115,7 +115,7 @@ ul {
 
 /* Alterações para tablets e dispositivos maiores */
 @media screen and (min-width: 768px) {
-    .container { /* A classe container pode ser aplicada a um elemento para transformá-lo em um contêiner grid. A partir disso, seus filhos diretos serão tratados como um item grid. */
+    .container {
         display: grid;
         grid-template:
         "j j"
