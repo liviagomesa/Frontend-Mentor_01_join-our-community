@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
-/* Todo o código foi feito para dispositivos móveis */
-/*______________________________________ Layout geral ______________________________________*/
+/* This code was made for mobile devices */
+/*______________________________________ General layout ______________________________________*/
 
 * {
     margin: 0;
@@ -15,17 +15,18 @@
 body {
     background-color: hsl(204, 43%, 93%);
     display: grid;
-    place-content: center; /* Os itens grid (é um só: o div.container) serão centralizados no body */
+    place-content: center; /* Grid items (there's just one: div.container) will be centralized within body */
 }
 
-.container {
+main {
     box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
     margin: 0 8%;
     border-radius: 10px;
-    overflow: hidden; /* O valor default de qualquer div é visible, i.e., seu conteúdo pode ser renderizado para fora dos seus limites. Sem definir o valor hidden, não tem como fazer as bordas arredondadas, porque as bordas das divs filhas a ultrapassam e são renderizadas normalmente em vez de ficarem escondidas. */
+    overflow: hidden; /* The default value for any div is visible, i.e., its content may be rendered outside its limits. 
+    If you don't define this property as hidden, you can't make rounded corners, because its children div borders overflow it and are rendered instead of being hidden. */
 }
 
-.container > * {
+main > * {
     padding: 7%;
     display: grid;
     grid-gap: 20px;
@@ -46,29 +47,28 @@ body {
     grid-area: w;
 }
 
-.informativo-preco {
+.price-information {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 5px;
 }
 
-/*______________________________________ Textos ______________________________________*/
+/*______________________________________ Texts ______________________________________*/
 h1 {
-    font-size: 18px;
+    font-size: 20px;
     color: hsl(179, 62%, 43%);
     font-weight: bold;
 }
 
-.texto-amarelo {
+.yellow-text {
     color: hsl(71, 73%, 54%);
     font-weight: bold;
-    font-size: 14px;
 }
 
-.texto-cinza {
+.gray-text {
     color: rgb(180, 180, 180);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.75em;
 }
 
@@ -76,18 +76,13 @@ h2 {
     color: white;
 }
 
-.preco {
-    font-size: 28px;
+.price {
+    font-size: 32px;
     font-weight: bold;
 }
 
 .per-month {
     opacity: 0.5;
-    font-size: 14px;
-}
-
-.full-access {
-    font-size: 14px;
 }
 
 button {
@@ -95,7 +90,6 @@ button {
     border-radius: 5px;
     border: none;
     padding: .9em;
-    font-size: 14px;
     font-style: bold;
     width: 100%;
     text-align: center;
@@ -103,7 +97,7 @@ button {
 }
 
 li {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5em;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -113,9 +107,9 @@ ul {
     list-style-type: none;
 }
 
-/* Alterações para tablets e dispositivos maiores */
+/* Changes for tablets and bigger screens */
 @media screen and (min-width: 768px) {
-    .container {
+    main {
         display: grid;
         grid-template:
         "j j"
@@ -124,7 +118,7 @@ ul {
         width: 640px;
         margin: 0;
     }
-    .container > * {
+    main > * {
         padding: 40px;
     }
 }

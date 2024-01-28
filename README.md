@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/liviagomesa/join-our-community)
-- Live Site URL: (https://liviagomesa.github.io/join-our-community/)
+- [Solution URL](https://github.com/liviagomesa/join-our-community)
+- [Live Site URL](https://liviagomesa.github.io/join-our-community/)
 
 ## My process
 
@@ -61,7 +61,9 @@ Users should be able to:
 ```
 
 4. To add opacity to a color, replace "rgb" (or "hsl") with "rgba" (or hsla) and add a third value between 0 and 1, like this:
+```css
 rgba(0, 0, 0, 0.1);
+```
 
 5. To set margin, padding and similar properties values, the syntax is:
 4 values: top right bottom left (clockwise)
@@ -97,11 +99,13 @@ I'm not completely comfortable with the concepts and techniques below - but I th
 - defining page's layout (columns and rows)
 - content overflow
 
+I could have used cards instead of grids to define the layout.
+
 ### Useful resources
 
-- (https://www.w3schools.com/css/css3_shadows_box.asp) - Syntax for CSS box shadow
-- (https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template) - grid-template
-- (https://stackoverflow.com/questions/8582176/should-border-radius-clip-the-content) - This helped me to find out why I couldn't set rounded corners for my main container: The default overflow for <div> elements is visible, so its content may be rendered outside the block box. I've changed it to hidden and the problem was solved.
+- [Syntax for CSS box shadow - w3schools](https://www.w3schools.com/css/css3_shadows_box.asp)
+- [grid-template CSS property - mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template)
+- [Should border-radius clip the content? - stackoverflow](https://stackoverflow.com/questions/8582176/should-border-radius-clip-the-content) - This helped me to find out why I couldn't set rounded corners for my main container: The default overflow for <div> elements is visible, so its content may be rendered outside the block box. I've changed it to hidden and the problem was solved.
 
 ## Author
 
